@@ -1,4 +1,4 @@
-# TSB - Nightmare Mode
+# TSB - Nightmare Mode v0.1.0
 
 ### ※この作品はTheSkyBlessingの二次創作です
 
