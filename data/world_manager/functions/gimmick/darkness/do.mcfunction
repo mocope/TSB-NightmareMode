@@ -7,9 +7,9 @@
 #   world_manager:gimmick/darkness/do
 
 # 適当な座標を指定する
-    execute store result score $X Temporary run random value -48..48
-    execute store result score $Y Temporary run random value -16..24
-    execute store result score $Z Temporary run random value -48..48
+    execute store result score $X Temporary run random value -24..24
+    execute store result score $Y Temporary run random value -8..24
+    execute store result score $Z Temporary run random value -24..24
 # 座標をストレージに代入
     execute store result storage world_manager:gimmick Darkness.Check.X int 1 run scoreboard players get $X Temporary
     execute store result storage world_manager:gimmick Darkness.Check.Y int 1 run scoreboard players get $Y Temporary
@@ -27,7 +27,7 @@
     scoreboard players operation $DarknessAnxiety Global += $InDarkness Temporary
 
 # ペナルティ値が一定まで溜まったら発動
-    execute if score $DarknessAnxiety Global matches 100.. run function world_manager:gimmick/darkness/penalty.m with storage world_manager:gimmick Darkness.Check
+    execute if score $DarknessAnxiety Global matches 400.. run function world_manager:gimmick/darkness/penalty.m with storage world_manager:gimmick Darkness.Check
 
 # リセット
     data remove storage world_manager:gimmick Darkness.Check
