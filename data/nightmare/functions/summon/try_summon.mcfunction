@@ -5,9 +5,9 @@
 # @within function nightmare:tick
 
 # 適当な座標を指定する
-    execute store result score $X Temporary run random value -24..24
+    execute store result score $X Temporary run random value -48..48
     execute store result score $Y Temporary run random value -8..24
-    execute store result score $Z Temporary run random value -24..24
+    execute store result score $Z Temporary run random value -48..48
 # 座標をストレージに代入
     execute store result storage nightmare: Darkness.Check.X int 1 run scoreboard players get $X Temporary
     execute store result storage nightmare: Darkness.Check.Y int 1 run scoreboard players get $Y Temporary

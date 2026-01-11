@@ -5,12 +5,13 @@
 # @within tag/function minecraft:tick
 
 # 初回ログイン時メッセージ
-    execute as @a[tag=!NightmareLogin] run function nightmare:message
+    execute as @a[tag=!NightmareLogin0.1.2] run function nightmare:message
 
 # 常時夜
     time set midnight
 
-# 30秒に一回召喚
-    scoreboard players add $NightmareSummonCount Global 1
-# 召喚
-    execute if score $NightmareSummonCount Global matches 600.. as @r[gamemode=!spectator,tag=!Death] at @s align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
+# 暗視
+    effect give @a[tag=!DarkNightmare] night_vision 11 0 true
+
+# 召喚カウント
+    execute as @r[gamemode=!spectator,tag=!Death,limit=3] at @s run function nightmare:summon/tick

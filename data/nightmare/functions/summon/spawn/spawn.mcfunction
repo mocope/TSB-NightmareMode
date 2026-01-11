@@ -7,20 +7,18 @@
 #   nightmare:summon/spawn/spawn
 
 # 敵のレベルを決定する
-# $Random = Progress(e4) + (0 ~ 50)^2
+# $Random = Progress(e2) + (0 ~ 10)
     function api:global_vars/game_progress
-    # execute store result score $Random Temporary run random value 0..50
-    # scoreboard players operation $Random Temporary *= $Random Temporary
-    scoreboard players set $Random Temporary 0
-    execute store result score $Progress Temporary run data get storage api: Return.Progress 10000
+    execute store result score $Random Temporary run random value 0..10
+    execute store result score $Progress Temporary run data get storage api: Return.Progress 100
     scoreboard players operation $Random Temporary += $Progress Temporary
     # scoreboard players operation $Random Temporary < $99 Const
 # ID を一覧から選定して召喚
-    execute if score $Random Temporary matches 0000..0999 run function nightmare:summon/spawn/pick.m {Level:0}
-    execute if score $Random Temporary matches 1000..2899 run function nightmare:summon/spawn/pick.m {Level:1}
-    execute if score $Random Temporary matches 2900..5399 run function nightmare:summon/spawn/pick.m {Level:2}
-    execute if score $Random Temporary matches 5400..7499 run function nightmare:summon/spawn/pick.m {Level:3}
-    execute if score $Random Temporary matches 7500.. run function nightmare:summon/spawn/pick.m {Level:4}
+    execute if score $Random Temporary matches 00..09 run function nightmare:summon/spawn/pick.m {Level:0}
+    execute if score $Random Temporary matches 10..24 run function nightmare:summon/spawn/pick.m {Level:1}
+    execute if score $Random Temporary matches 25..44 run function nightmare:summon/spawn/pick.m {Level:2}
+    execute if score $Random Temporary matches 45..74 run function nightmare:summon/spawn/pick.m {Level:3}
+    execute if score $Random Temporary matches 75.. run function nightmare:summon/spawn/pick.m {Level:4}
     function api:mob/summon
 
 # リセット
