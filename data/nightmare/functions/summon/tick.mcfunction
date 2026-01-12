@@ -4,7 +4,7 @@
 #
 # @within function nightmare:tick
 
-# (600 / (攻略率(e2) / 10 + 10 - 16m以内の敵数))秒毎に召喚
+# (400 / (攻略率(e2) / 10 + 10 - 16m以内の敵数))秒毎に召喚
     # MaxEnemies
         function api:global_vars/game_progress
         execute store result score $MaxEnemies Temporary run data get storage api: Return.Progress 10
@@ -21,5 +21,8 @@
     scoreboard players reset $MaxEnemies Temporary
     scoreboard players reset $EnemyCount Temporary
 
-# 30秒分以上で召喚
-execute if score @s NightmareCount matches 12000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
+# 20秒分以上で召喚
+    # ボスがいる場合30秒
+        execute if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] if score @s NightmareCount matches 12000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
+    # いなければ20秒
+        execute if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] if score @s NightmareCount matches 8000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
