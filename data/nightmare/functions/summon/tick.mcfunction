@@ -25,4 +25,4 @@
     # ボスがいる場合30秒
         execute if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] if score @s NightmareCount matches 12000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
     # いなければ20秒
-        execute if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] if score @s NightmareCount matches 8000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
+        execute unless entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] if score @s NightmareCount matches 8000.. align xyz positioned ~0.5 ~ ~0.5 run function nightmare:summon/try_summon
