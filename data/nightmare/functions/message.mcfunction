@@ -5,6 +5,8 @@
 # @within function nightmare:tick
 
 tag @s remove NightmareLogin
+tag @s remove NightmareLogin0.1.1
+tag @s remove NightmareLogin0.1.2
 tag @s add NightmareLogin0.1.3
 
 # 導入メッセージ
