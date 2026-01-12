@@ -5,7 +5,7 @@
 # @within function nightmare:load
 
 # バージョン定義
-    data modify storage nightmare: Version set value "v0.1.2"
+    data modify storage nightmare: Version set value "v0.1.3"
 
 # scoreboard
     scoreboard objectives add NightmareCount dummy

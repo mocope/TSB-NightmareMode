@@ -5,10 +5,10 @@
 # @within function nightmare:tick
 
 tag @s remove NightmareLogin
-tag @s add NightmareLogin0.1.2
+tag @s add NightmareLogin0.1.3
 
 # 導入メッセージ
-    tellraw @s [{"text": "----------", "color": "white"},{"text":"TSB Nightmare v0.1.2", "color": "blue"},{"text":"----------", "color": "white"}]
+    tellraw @s [{"text": "----------", "color": "white"},{"text":"TSB Nightmare v0.1.3", "color": "blue"},{"text":"----------", "color": "white"}]
     tellraw @s {"text": ""}
     tellraw @s {"text": "このパッチでは5つの機能が追加されています"}
     tellraw @s {"text": "・世界が常に夜になる"}
