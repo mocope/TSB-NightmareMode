@@ -12,8 +12,8 @@
     # EnemyCount
         execute store result score $EnemyCount Temporary if entity @e[type=#lib:living_without_player,tag=Enemy,distance=..16]
         scoreboard players operation $MaxEnemies Temporary -= $EnemyCount Temporary
-    # 周囲に敵が全くいない場合カウントが加速
-        execute if score $EnemyCount Temporary matches 0 run scoreboard players set $MaxEnemies Temporary 20
+    # 周囲に敵が全くいない場合カウントが加速(x2)
+        execute if entity @e[type=#lib:living_without_player,tag=Enemy,distance=..32] if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] run scoreboard players operation $MaxEnemies Temporary *= $2 Temporary
     # NightmareCount
         execute if score $MaxEnemies Temporary matches 1.. run scoreboard players operation @s NightmareCount += $MaxEnemies Temporary
 
