@@ -16,6 +16,8 @@
 # 近くに天使がいる場合はなかったことにする
     # 天使がいても容赦なく湧く
     # execute if entity @e[type=#lib:living_without_player,tag=Enemy.Boss,distance=..64,limit=1] run return fail
+# 浄化中のプレイヤーがいれば湧かない
+    execute if entity @a[distance=..75,scores={DispelTime=1..160}]
 
 # 敵を召喚する
 # $SpawnCount = floor( 4 * 0.70~1.00(e2) / e2 )
