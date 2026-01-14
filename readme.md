@@ -48,5 +48,5 @@ TheSkyBlessingの対応バージョンは1.0.5です。それ以前の動作チ�
 </details>
 <details><summary>0.1.5</summary>
 
-- シャドウストーカーの攻撃時にエラーが出るバグを修正
+- シャドウストーカーを攻撃時にエラーが出るバグを修正
 </details>
