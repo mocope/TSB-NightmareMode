@@ -5,7 +5,7 @@
 # @within tag/function minecraft:tick
 
 # 初回ログイン時メッセージ
-    execute as @a[tag=!NightmareLogin0.1.5] run function nightmare:message
+    execute as @a[tag=!NightmareLogin0.1.6] run function nightmare:message
 
 # 常時夜
     time set midnight

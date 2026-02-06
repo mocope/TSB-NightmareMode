@@ -1,4 +1,4 @@
-# TSB - Nightmare Mode v0.1.5
+# TSB - Nightmare Mode v0.1.6
 
 ### ※この作品はTheSkyBlessingの二次創作です
 
@@ -46,7 +46,7 @@ TheSkyBlessingの対応バージョンは1.0.5です。それ以前の動作チ�
 - とある二次創作と同時に導入した際のシャドウストーカーを強化
 - 神器を浄化中に自然湧きが湧かないように
 </details>
-<details><summary>0.1.5</summary>
+<details><summary>0.1.6</summary>
 
 - シャドウストーカーを攻撃時にエラーが出るバグを修正
 </details>

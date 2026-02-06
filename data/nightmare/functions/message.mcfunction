@@ -9,10 +9,11 @@ tag @s remove NightmareLogin0.1.1
 tag @s remove NightmareLogin0.1.2
 tag @s remove NightmareLogin0.1.3
 tag @s remove NightmareLogin0.1.4
-tag @s add NightmareLogin0.1.5
+tag @s remove NightmareLogin0.1.5
+tag @s add NightmareLogin0.1.6
 
 # 導入メッセージ
-    tellraw @s [{"text": "----------", "color": "white"},{"text":"TSB Nightmare v0.1.5", "color": "blue"},{"text":"----------", "color": "white"}]
+    tellraw @s [{"text": "----------", "color": "white"},{"text":"TSB Nightmare v0.1.6", "color": "blue"},{"text":"----------", "color": "white"}]
     tellraw @s {"text": ""}
     tellraw @s {"text": "このパッチでは5つの機能が追加されています"}
     tellraw @s {"text": "・世界が常に夜になる"}
@@ -21,5 +22,7 @@ tag @s add NightmareLogin0.1.5
     tellraw @s {"text": "・とあるモブの能力が暗所でなくても発動する"}
     tellraw @s {"text": "・常に暗視が付く"}
     tellraw @s {"text": "　コマンドを有効化して「/tag @s add DarkNightmare」を実行することで削除できます"}
+execute if data storage mou: {firstJoin: 1b} run tellraw @s {"text": ""}
+execute if data storage mou: {firstJoin: 1b} run tellraw @s [{"text": "・"}, {"text": "MobOverUpper", "color": "dark_red"}, {"text": "が適応されているため、シャドウストーカーが強化されます"}]
     tellraw @s {"text": ""}
     tellraw @s {"text": "------------------------------------"}
