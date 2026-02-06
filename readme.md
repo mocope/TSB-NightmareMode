@@ -46,7 +46,11 @@ TheSkyBlessingの対応バージョンは1.0.5です。それ以前の動作チ�
 - とある二次創作と同時に導入した際のシャドウストーカーを強化
 - 神器を浄化中に自然湧きが湧かないように
 </details>
-<details><summary>0.1.6</summary>
+<details><summary>0.1.5</summary>
 
 - シャドウストーカーを攻撃時にエラーが出るバグを修正
+</details>
+<details><summary>0.1.6</summary>
+
+- MobOverUpperとの連携が正常に作動していなかったバグを修正
 </details>
